@@ -6,6 +6,18 @@
       "type": "node",
       "request": "attach",
       "port": 8217,
+    },
+    {
+      "name": "Mocha (Test single file)",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "${workspaceRoot}/node_modules/.bin/mocha",
+        "--inspect-brk",
+        "${relativeFile}",
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
     }
   ]
 }
